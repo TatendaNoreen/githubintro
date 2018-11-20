@@ -1,5 +1,5 @@
-import random
-import operator
+#how to create and move agents
+
 import matplotlib.pyplot
 import agentframework
 
