@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot
 import agentframework
 import csv
@@ -15,10 +17,11 @@ for row in reader:
     rowlist=[]		# A list of rows
     environment.append(rowlist)
     for value in row:				# A list of value
-        print(value) 				# Floats
+        #print(value) 				# Floats
         rowlist.append(value)
 f.close() 	# Don't close until you are done with the reader;
 		# the data is read on request.
+        
 
 
 
@@ -73,11 +76,13 @@ def update(frame_number):
        
     
 # plot
-    matplotlib.pyplot.xlim(0, 99)
-    matplotlib.pyplot.ylim(0, 99)
+    matplotlib.pyplot.xlim(0, 299)
+    matplotlib.pyplot.ylim(0, 299)
     for i in range(num_of_agents):
         matplotlib.pyplot.scatter(agents[i].x,agents[i].y)    
     matplotlib.pyplot.imshow(environment)    
     
 animation = matplotlib.animation.FuncAnimation(fig, update, interval=1)
 matplotlib.pyplot.show() 
+
+
