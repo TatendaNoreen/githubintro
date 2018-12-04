@@ -1,4 +1,4 @@
-#how to create and move agents
+#how to create and move agents before introducing environment
 
 import matplotlib.pyplot
 import agentframework

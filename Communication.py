@@ -28,7 +28,7 @@ f.close() 	# Don't close until you are done with the reader;
 
 num_of_agents = 10
 num_of_iterations = 10
-
+neighbourhood = 20
 
 
 # Make the agents and connecting with the environment.
@@ -43,13 +43,35 @@ for j in range(num_of_iterations):
     for i in range(num_of_agents):
         agents[i].move()
         agents[i].eat()
+        agents[i].share_with_neighbours(neighbourhood)
         
+   
+        
+        
+# Loop through the agents in self.agents .
+    # Calculate the distance between self and the current other agent:
+    # distance = self.distance_between(agent) 
+    # If distance is less than or equal to the neighbourhood
+        # Sum self.store and agent.store .
+        # Divide sum by two to calculate average.
+        # self.store = average
+            # agent.store = average
+    # End if
+# End loop         
+      
+      
+       
+    
 # plot
 matplotlib.pyplot.xlim(0, 99)
 matplotlib.pyplot.ylim(0, 99)
 for i in range(num_of_agents):
-    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
+    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)    
 matplotlib.pyplot.imshow(environment)    
 matplotlib.pyplot.show()  
 
-         
+
+
+
+
+
